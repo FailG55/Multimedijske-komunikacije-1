@@ -1,22 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-h1,h2{
-    font-family: Roboto;
+.navigacija{
+    display:flex;
+    padding-left:20px;
+}
+
+header{
+    background-color: green;
+}
+
+body{
+    background-color: seagreen;
+    color:aliceblue;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2{
     text-decoration: underline;
 }
 
-p,ul{
-    font-style:oblique;
-    font-weight: 500;
-    font-size: 20px;
-    font-family:'Segoe UI';
+h1,h2{
+    font-family: Roboto;
+    display:block;
+    text-align: center;
 }
 
 em{
     font-weight: 900;
 }
 
-body{
-    background-color: seagreen;
-    color:aliceblue;
+p,ul,ol{
+    font-style:oblique;
+    font-weight: 500;
+    font-size: 20px;
+    font-family:'Segoe UI';
+    display:block;
+    text-align:center;
+
+}
+
+ul,ol{
+    list-style-position:inside;
+}
+
+ol{
+    list-style:upper-roman;
+    list-style-position:inside;
+}
+
+span{
+    background-color: red;
+}
+
+#printer{
+    align-items: center;
+    display:block;
+    float:right;
 }
