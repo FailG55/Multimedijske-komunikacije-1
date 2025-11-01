@@ -1,29 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
 
-.navigacija{
-    display:flex;
-    padding-left:20px;
+body {
+  background-image: url("slike/pozadina.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-header{
-    background-color: green;
+a{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:0.2s;
+    color:white;
 }
 
-body{
-    background-color: seagreen;
-    color:aliceblue;
+a:hover{
+    color:rgb(51, 62, 119);
+}
+
+a:active,button:active{
+    text-shadow: 2px 2px 30px rgb(0, 0, 0);
 }
 
 h1{
-    font-size: 40px;
+    font-size: 50px;
 }
 
 h2{
-    text-decoration: underline;
+    font-size:30px;
 }
 
-h1,h2{
+h3{
+    font-size:25px;
+}
+
+h1,h2,h3{
     font-family: Roboto;
+    color: #e7e7e7;
     display:block;
     text-align: center;
 }
@@ -33,13 +49,11 @@ em{
 }
 
 p,ul,ol{
-    font-style:oblique;
     font-weight: 500;
-    font-size: 20px;
-    font-family:'Segoe UI';
+    font-size: 25px;
+    font-family: Roboto;
     display:block;
     text-align:center;
-
 }
 
 ul,ol{
@@ -52,11 +66,110 @@ ol{
 }
 
 span{
-    background-color: red;
+    text-decoration: underline;
 }
 
-#printer{
-    align-items: center;
+img{
+    border-radius: 20px;
     display:block;
-    float:right;
+}
+
+.navigacija{
+    color: #e7e7e7;
+    background-color: #383b7131;
+    margin: 50px 250px 100px 250px;
+    padding: 30px 50px 30px 50px;
+    border-radius: 30px;
+    text-align: center;
+    word-spacing: 50px;
+    text-shadow: 1px 1px 3px black;
+    transition: 0.5s;
+}
+
+.paragraf{
+    display:block;
+    color: #e7e7e7;
+    background-color: #383b7131;
+    margin: 0px 350px 50px 350px;
+    padding: 15px 0px 15px 0px;
+    border-radius: 30px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.266);
+    box-shadow: 1px 1px 2px rgba(40, 54, 117, 0.347);
+    transition: 0.5s;
+}
+
+.paragraf:hover,.navigacija:hover{
+    background-color: #2e235531;
+}
+
+#slika{
+    width:400px;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+/* Forma.html */
+
+form{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 30px;
+    display:block;
+    text-align: center;
+}
+
+input{
+    margin:15px;
+}
+
+fieldset{
+    margin: 50px 75px 50px 75px;
+    border-radius: 25px;
+}
+
+button,input,select{
+    margin: 20px 0px 20px 0px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.266);
+    box-shadow: 1px 1px 2px rgba(40, 54, 117, 0.347);
+    border-color: rgba(40, 54, 117, 0.411);
+    font-family: Roboto;
+    font-weight: 500;
+    transition:1s;
+}
+
+button{
+    color: #ffffffe8;
+    background-color: #1c257757;
+    border:none;
+    padding: 25px 60px;
+    font-size: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input{
+    color: #ffffffe8;
+    background-color: #1c257757;
+    border-width: 2.5px;
+    border-style: solid;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+select{
+    color: #ffffffe8;
+    background-color: #1c257757;
+    border:none;
+    padding: 15px 35px;
+    font-size: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input:focus,select:focus,button:hover{
+    color: #000000e8;
+    background-color: #ffffffd9;
+    transition:1s;
 }
