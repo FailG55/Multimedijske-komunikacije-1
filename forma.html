@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anketa</title>
+    <link rel="stylesheet" href="stil.css">
+  </head>
+  <body>
+    <header class="navigacija">
+    <a href="index.html">Home</a>
+    <a href="forma.html">Anketa</a>
+  </header>
+    <main>
+        <div class="paragraf">
+          <form action="hvala.html">
+            <h1>Dobrodošli u anketu!</h1>
+            <fieldset>
+              <legend>Anketa!</legend>
+            <h2>Molim vas unesite vaše ime:</h2>
+            <input type="text" name="ime" placeholder="Unesite ime">
+            <h2>Molim vas unesite vašu e-mail adresu:</h2>
+            <label for="email">E-mail :</label>
+            <input type="email">
+            <h2>1. Pitanje, odakle ste?</h2>
+            <label for="email">Upišite grad :</label>
+            <input list="gradovi" name="grad">
+            <datalist id="gradovi">
+              <option>Zagreb</option>
+              <option>Split</option>
+              <option>Rijeka</option>
+              <option>Osijek</option>
+              <option>Zadar</option>
+            </datalist>
+            <h2>2. Pitanje, mislite li da ovoj anketi treba još pitanja?</h2>
+            <select name="Opcije">
+              <option>Da</option>
+              <option>Ne</option>
+              <option>Možda</option>
+            </select>
+            <h2>3. Je li mi stranica lijepa? :)</h2>
+            <select name="Opcije">
+              <option>Da</option>
+              <option>Ne</option>
+            </select><br><br>
+              <button>Pošalji!</button>
+            </fieldset>
+          </form>
+        </div>
+    </main>
+  </body>
+</html>
