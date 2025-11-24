@@ -4,118 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Moja Stranica</title>
+    <title>Anketa</title>
     <link rel="stylesheet" href="stil.css">
   </head>
   <body>
     <header class="navigacija">
-      <a href="index.html">Home</a>
-      <a href="forma.html">Anketa</a>
-    </header>
+    <a href="index.html">Home</a>
+    <a href="forma.html">Anketa</a>
+  </header>
     <main>
         <div class="paragraf">
-          <h2>NOVO! Ispunite anketu!</h2>
-        </div>
-        <div class="paragraf">
-          <h1>Dobrodošli na moju web stranicu!</h1>
-          <h3>Ja sam Marko Letica i idem na <em>Grafički fakultet</em> u Zagrebu i<br> ovo je moja stranica iz kolegija Multimedijske Komunikacije 1. </h>
-          <h2>Malo više o meni:</h2>
-          <ul>
-              <li>Dolazim iz Trogira</li>
-              <li>Jako volim računala</li>
-             <li>U slobodno vrijeme se bavim<br> fotografijom i 3D printanjem</li>
-          </ul>
-          <h2>Ovo je lista mojih omiljenih videoigara:</h2>
-          <ol>
-              <li>Super Mario Galaxy (2007.)</li>
-              <li>Minecraft (2009.)</li>
-              <li>Satisfactory (2024.)</li>
-          </ol>
-          <img width="250px" src="slike/marko.png">
-        </div>
-        <div class="paragraf">
-          <h2>Na ovoj stranici ću prikazati svoje hobije i mnoštvo drugih stvari, evo primjer:</h2> 
-          <h3>Ispod ovog paragrafa koji nije vrlo velik imate sliku <strong>mog 3D printera</strong>.<br> To je Ender 3 V3 od kompanije Creality:</h3><br>
-          <img id="slika" src="slike/printer.jpg"><br>
-          <p>
-            Za 3D printanje <span>najčešće koristim PLA plastiku, čija je kemijska formula C<sub>3</sub>H<sub>4</sub>O<sub>2</sub></span><br>
-            Također, iskoristio sam preko 3<sup>2</sup> kg filamenta kroz svoj hobi 3D printanja. Ispod ovog paragrafa možete pronaći tablicu svojstava za najraširenije filamente.
-          </p>
-        </div>
-        <div class="paragraf">
-          <h2>Svojstva filamenta za 3D printere:</h2>
-          <table>
-            <thead>
-              <tr>
-                <th colspan="2" rowspan="2"></th>
-                <th colspan="6">Vrste materijala</th>
-              </tr>
-              <tr>
-                <th>PLA</th>
-                <th>ABS</th>
-                <th>TPU</th>
-                <th>PETG</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowspan="4">Informacije o <br> printanju</td>
-              </tr>
-              <tr>
-                <td>Temperatura mlaznice</td>
-                <td>190 - 220°C</td>
-                <td>220 - 250°C</td>
-                <td>225 - 245°C</td>
-                <td>230 - 250°C</td>
-              </tr>
-              <tr>
-                <td>Printabilnost</td>
-                <td>9/10</td>
-                <td>8/10</td>
-                <td>6/10</td>
-                <td>9/10</td>
-              </tr>
-              <tr>
-                <td>Grijano postolje</td>
-                <td>Opcionalno</td>
-                <td>Potrebno</td>
-                <td>Potrebno</td>
-                <td>Potrebno</td>
-              </tr>
-              <tr>
-                <td rowspan="4">Svojstva</td>
-              </tr>
-              <tr>
-                <td>Snaga</td>
-                <td>65MPa</td>
-                <td>40MPa</td>
-                <td>23-43MPa</td>
-                <td>53MPa</td>
-              </tr>
-              <tr>
-                <td>Fleksibilnost</td>
-                <td>Ne</td>
-                <td>Ne</td>
-                <td>Da</td>
-                <td>Ne</td>
-              </tr>
-              <tr>
-                <td>Trajnost</td>
-                <td>4/10</td>
-                <td>8/10</td>
-                <td>9/10</td>
-                <td>8/10</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            Sve ove materijale sam koristio kod 3D printanja, najviše preferiram PLA jer je jako lagan za printati.
-          </p>
-        </div>
-        <img class="markoslika1" width="250px" src="slike/marko.png">
-        <div class="paragraf">
-          <h1>Uskoro idemo dalje...</h1>
-          <h2>Nastavak uskoro!<br>:)</h2>
+          <form action="hvala.html">
+            <h1>Dobrodošli u anketu!</h1>
+            <fieldset>
+              <legend>Anketa!</legend>
+            <h2>Molim vas unesite vaše ime:</h2>
+            <input type="text" name="ime" placeholder="Unesite ime">
+            <h2>Molim vas unesite vašu e-mail adresu:</h2>
+            <label for="email">E-mail :</label>
+            <input type="email">
+            <h2>1. Pitanje, odakle ste?</h2>
+            <label for="email">Upišite grad :</label>
+            <input type="gradovi" list="gradovi" name="grad">
+            <datalist id="gradovi">
+              <option>Zagreb</option>
+              <option>Split</option>
+              <option>Rijeka</option>
+              <option>Osijek</option>
+              <option>Zadar</option>
+            </datalist>
+            <h2>2. Pitanje, mislite li da ovoj anketi treba još pitanja?</h2>
+            <select name="Opcije">
+              <option>Da</option>
+              <option>Ne</option>
+              <option>Možda</option>
+            </select>
+            <h2>3. Je li mi stranica lijepa? :)</h2>
+            <select name="Opcije">
+              <option>Da</option>
+              <option>Ne</option>
+            </select><br><br>
+            <h2>3. Je li mi stranica lijepa? :)</h2>
+              <button name="subject" type="submit" value="posalji">Pošalji!</button>
+            </fieldset>
+          </form>
         </div>
     </main>
   </body>
