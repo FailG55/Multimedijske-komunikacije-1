@@ -6,7 +6,11 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  font-family: Roboto;
+  color: #e7e7e7;
 }
+
+/* Linkovi */
 
 a{
     font-family: 'Helvetica Neue', sans-serif;
@@ -17,7 +21,7 @@ a{
     color:white;
 }
 
-a:hover{
+.navigacija a:hover{
     color:rgb(51, 62, 119);
 }
 
@@ -25,78 +29,89 @@ a:active,button:active{
     text-shadow: 2px 2px 30px rgb(0, 0, 0);
 }
 
-h1{
-    font-size: 50px;
+a[href]:hover{
+    border-bottom: 3px solid rgb(51, 62, 119);
 }
 
-h2{
-    font-size:30px;
-}
+/* Headeri i tekst */
 
-h3{
-    font-size:25px;
-}
-
-h1,h2,h3{
-    margin-left:50px auto;
-    margin-right:50px auto;
-    font-family: Roboto;
-    color: #e7e7e7;
+h1, h2, h3, p, ul, ol, table, label {
     display:block;
     text-align: center;
-}
-
-em{
-    font-weight: 900;
-}
-
-p,ul,ol,table,label{
-    margin-left:50px;
-    margin-right:50px;
+    margin: 20px auto;
     font-weight: 500;
-    font-size: 20px;
-    font-family: Roboto;
-    display:block;
-    text-align:center;
 }
 
-ul,ol{
+h1 {font-size: 50px;}
+h2 {font-size:30px;}
+h3 {font-size:25px;}
+
+p, ul, ol, table, label { font-size: 20px;}
+
+em {font-weight: 900;}
+
+span {text-decoration: underline;}
+
+/* Liste */
+
+.paragraf ul, .paragraf ol{
     list-style-position:inside;
 }
 
-ol{
-    list-style:upper-roman;
-    list-style-position:inside;
-}
+ol {list-style:upper-roman;}
 
-span{
-    text-decoration: underline;
-}
+/* Slike */
 
 img{
     border-radius: 20px;
     display:block;
 }
 
+.paragraf img{
+    border: 3px solid rgba(25, 119, 169, 0.403)
+}
+
+#slika{
+    width:400px;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.markoslika1{
+    float:left;
+    margin-left: 250px;
+    margin-right: 50px;
+    clear:both;
+}
+
+/* Navigacija */
+
 .navigacija{
     color: #e7e7e7;
     background-color: #383b7131;
     margin: 50px 150px 100px 150px;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 50px;
     border-radius: 30px;
     text-align: center;
     word-spacing: 50px;
     text-shadow: 1px 1px 3px black;
     transition: 0.5s;
+    position: relative;
+    top: 20px;
 }
 
-.paragraf{
+/* Paragrafi */
+
+.paragraf {
+    display: flex;
     align-items: center;
-    display: block;
+    flex-direction: column;
+    justify-content: center;
     color: #e7e7e7;
     background-color: #383b7131;
     margin: 0px 250px 50px 250px;
-    padding: 15px 0px 15px 0px;
+    padding: 15px 0px;
     border-radius: 30px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.266);
     box-shadow: 1px 1px 2px rgba(40, 54, 117, 0.347);
@@ -105,13 +120,6 @@ img{
 
 .paragraf:hover,.navigacija:hover{
     background-color: #2e235531;
-}
-
-#slika{
-    width:400px;
-    display:block;
-    margin-left:auto;
-    margin-right: auto;
 }
 
 /* Forma.html */
@@ -124,59 +132,55 @@ form{
     text-align: center;
 }
 
+button, input, select{
+    font-family: Roboto;
+    font-weight: 500;
+    margin: 20px 0px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.266);
+    box-shadow: 1px 1px 2px rgba(40, 54, 117, 0.347);
+    border-color: rgba(40, 54, 117, 0.411);
+    background-color: #1c257757;
+    border-radius: 15px;
+    transition:1s;
+    color: #ffffffe8;
+}
+
+input[type="text"] {color:rgb(255, 176, 116);}
+
+input[type="email"] {color:rgb(255, 150, 69);}
+
+input[type="gradovi"] {color:rgb(255, 124, 23);}
+
+button{
+    border:none;
+    padding: 15px 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 input{
-    margin:15px;
+    border: 2.5px solid rgba(40,54,117,0.411);
+    padding: 15px 40px;
+    font-size: 20px;
+}
+
+input:focus, select:focus, button:hover{
+    color: #000000e8;
+    background-color: #ffffffd9;
 }
 
 fieldset{
     margin: 50px 75px 50px 75px;
     border-radius: 25px;
-}
-
-button,input,select{
-    margin: 20px 0px 20px 0px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.266);
-    box-shadow: 1px 1px 2px rgba(40, 54, 117, 0.347);
-    border-color: rgba(40, 54, 117, 0.411);
-    font-family: Roboto;
-    font-weight: 500;
-    transition:1s;
-}
-
-button{
-    color: #ffffffe8;
-    background-color: #1c257757;
-    border:none;
-    padding: 15px 40px;
-    font-size: 30px;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-input{
-    color: #ffffffe8;
-    background-color: #1c257757;
-    border-width: 2.5px;
-    border-style: solid;
-    padding: 15px 40px;
-    font-size: 20px;
-    border-radius: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 select{
-    color: #ffffffe8;
-    background-color: #1c257757;
     border:none;
     padding: 15px 35px;
     font-size: 30px;
-    border-radius: 15px;
     cursor: pointer;
-}
-
-input:focus,select:focus,button:hover{
-    color: #000000e8;
-    background-color: #ffffffd9;
-    transition:1s;
 }
 
 /* Tablice */
@@ -195,22 +199,16 @@ table{
     cursor: pointer;
 }
 
-td:nth-child(1),thead{
-    background-color: #213556be;
-}
-
-td{
-    background-color: #21417dbe;
-}
-
-td,th,tr{
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.266);
+table td, table th, table tr {
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.266);
     transition: 0.1s;
-    padding:5px 15px 5px 15px;
+    padding: 5px 15px;
     border: 2px solid #ffffffb4;
     border-radius: 5px;
 }
 
-tbody td:hover,tbody tr:hover{
-    background-color: rgba(255, 153, 0, 0.821);
-}
+table th {vertical-align:middle;}
+
+td:nth-child(1),thead {background-color: #213556be;}
+
+tbody td:hover,tbody tr:hover {background-color: rgba(255, 153, 0, 0.821);}
