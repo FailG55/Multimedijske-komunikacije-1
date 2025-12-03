@@ -1,6 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
 
+/* Za manje ekrane */
+
+@media (max-width: 800px) {
+
+    .navigacija {
+        margin: 20px;
+        padding: 20px;
+        word-spacing: 20px;
+    }
+
+    .paragraf {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #slika, .paragraf img, .markoslika1, iframe{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        display: block;
+    }
+
+    h1 { font-size: 35px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    p, ul, ol, table, label { font-size: 16px; }
+
+    table {
+        width: 95%;
+        font-size: 14px;
+    }
+
+}
+
 body {
   background-image: url("slike/pozadina.jpg");
   background-size: cover;
@@ -67,7 +102,7 @@ ol {list-style:upper-roman;}
 
 /* Slike */
 
-img{
+img, iframe{
     border-radius: 20px;
     display:block;
 }
