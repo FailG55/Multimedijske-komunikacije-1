@@ -9,7 +9,7 @@
         background-image: url("slike/pozadina.jpg");
         background-size:cover;
         background-position: top center;
-        background-attachment: fixed;
+        background-attachment: scroll;
     }
 
     .navigacija, .paragraf {
@@ -388,4 +388,5 @@ tbody td:hover,tbody tr:hover {background-color: rgba(255, 153, 0, 0.821);}
     box-sizing: border-box;
     text-align: center;
 }
+
 
