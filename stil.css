@@ -5,19 +5,11 @@
 
 @media (max-width: 800px) {
 
-    html{
-     height: -webkit-fill-available;
-    }
-
     body {
-      background-image: url("slike/pozadina.jpg");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: Roboto;
-      color: #e7e7e7;
-      min-height: 100vh;
-      min-height: -webkit-fill-available;
+        background-image: url("slike/pozadina.jpg");
+        background-size:cover;
+        background-position: top center;
+        background-attachment: scroll;
     }
 
 
@@ -119,6 +111,10 @@
 
 }
 
+html{
+     height: -webkit-fill-available;
+}
+
 body {
   background-image: url("slike/pozadina.jpg");
   background-size: cover;
@@ -126,10 +122,8 @@ body {
   background-attachment: fixed;
   font-family: Roboto;
   color: #e7e7e7;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x:hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 /* Linkovi */
@@ -401,6 +395,7 @@ tbody td:hover,tbody tr:hover {background-color: rgba(255, 153, 0, 0.821);}
     box-sizing: border-box;
     text-align: center;
 }
+
 
 
 
