@@ -5,6 +5,12 @@
 
 @media (max-width: 800px) {
 
+    body {
+        background-image: url("slike/pozadina.jpg");
+        background-size:cover;
+        background-position: top center;
+    }
+
     .navigacija, .paragraf {
         margin-left: auto;
         margin-right: auto;
