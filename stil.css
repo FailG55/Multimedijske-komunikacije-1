@@ -41,7 +41,7 @@ a{
     color:white;
 }
 
-.navigacija a:hover{
+.navigacija a:hover, .navigacija a:focus{
     color:rgb(51, 62, 119);
 }
 
@@ -146,6 +146,29 @@ object {
     display:block;
     margin-left:auto;
     margin-right: auto;
+    transition: 1s;
+}
+
+#slika:hover {
+    transform: scaleX(2);
+}
+
+#eksplozija {
+    transition: 1s;
+}
+
+#eksplozija:hover {
+    transform: skewY(20deg);
+}
+
+.object-container{ 
+    transition: 1s;
+}
+
+
+.object-container:hover{ 
+    transform: rotate(720deg);
+    transition: 2s;
 }
 
 /* Navigacija */
@@ -220,7 +243,7 @@ button, input, select{
     border-color: rgba(40, 54, 117, 0.411);
     background-color: #1c257757;
     border-radius: 15px;
-    transition:1s;
+    transition:0.3s;
     color: #ffffffe8;
 }
 
@@ -243,7 +266,7 @@ input{
     font-size: 20px;
 }
 
-input:focus, select:focus, button:hover{
+input:focus, select:focus, button:hover, button:focus{
     color: #000000e8;
     background-color: #ffffffd9;
 }
