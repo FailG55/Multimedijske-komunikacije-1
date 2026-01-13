@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
 
+@keyframes laganopulsiranje {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes bojanje {
+    0% { color: hsl(0, 100%, 70%); }
+    25% { color: hsl(90, 100%, 70%); }
+    50% { color: hsl(180, 100%, 70%); }
+    75% { color: hsl(270, 100%, 70%); }
+    100% { color: hsl(360, 100%, 70%); }
+}
+
+@keyframes pomicanje {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(150px) }
+    50% { transform: translateX(0) }
+    75% { transform: translateX(-150px) }
+    100% { transform: translateX(0) }
+}
+
 html{
      height: 100%;
      margin: 0;
@@ -30,6 +52,15 @@ body {
     background: linear-gradient(to bottom, rgba(18, 40, 114, 0.403), transparent)
 }
 
+.posebanparagraf > .zadnjitekst {
+    display: inline-block;
+    animation: pomicanje 5s ease-in-out infinite;
+}
+
+.paragraf > .naslovi, form > .naslovi {
+    animation: bojanje 4s linear infinite;
+}
+
 /* Linkovi */
 
 a{
@@ -39,6 +70,10 @@ a{
     text-decoration: none;
     transition:0.2s;
     color:white;
+}
+
+a[target="_blank"] > button, fieldset > button {
+    animation: bojanje 5s infinite;
 }
 
 .navigacija a:hover, .navigacija a:focus{
@@ -62,6 +97,10 @@ h1 {font-size: 50px;}
 h2 {font-size:30px;}
 h3 {font-size:25px;}
 
+h1 + p {
+    margin-top: 10px;
+}
+
 p, ul, ol, table, label { font-size: 20px;}
 
 p {
@@ -74,6 +113,10 @@ em {font-weight: 900;}
 
 span {text-decoration: underline;}
 
+#anketanaslov {
+    animation: laganopulsiranje 3s infinite;
+}
+
 /* Liste */
 
 .paragraf ul, .paragraf ol{
@@ -84,6 +127,10 @@ span {text-decoration: underline;}
 }
 
 ol {list-style:upper-roman;}
+
+ol li:nth-of-type(even) {
+    animation: bojanje 3s infinite ease-in-out;
+}
 
 /* Slike, videi i vektori*/
 
@@ -129,10 +176,9 @@ img{
     border-radius: 20px;
 }
 
-.object-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.object-container > object {
+    display: inline-block;
+    transition: 2s;
 }
 
 object {
@@ -149,6 +195,12 @@ object {
     transition: 1s;
 }
 
+#slika ~ p {
+    border-left: 3px solid #ff9900;
+    border-right: 3px solid #ff9900;
+    padding-left: 15px;
+}
+
 #slika:hover {
     transform: scaleX(2);
 }
@@ -161,12 +213,8 @@ object {
     transform: skewY(20deg);
 }
 
-.object-container{ 
-    transition: 1s;
-}
 
-
-.object-container:hover{ 
+.object-container > object:hover{ 
     transform: rotate(720deg);
     transition: 2s;
 }
@@ -358,6 +406,14 @@ tbody td:hover,tbody tr:hover {background-color: rgba(255, 153, 0, 0.821);}
 /* Za manje ekrane */
 
 @media (max-width: 800px) {
+
+    @keyframes pomicanje {
+        0% { transform: translateX(0) }
+        25% { transform: translateX(30px) }
+        50% { transform: translateX(0) }
+        75% { transform: translateX(-30px) }
+        100% { transform: translateX(0) }
+    }
 
     body {
         background-image: url("slike/pozadina.jpg");
