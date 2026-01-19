@@ -176,9 +176,32 @@ img{
     border-radius: 20px;
 }
 
+#scott {
+    perspective: 1000px;
+    transition: 2s;
+}
+
+#scott:hover {
+    transform: rotateY(180deg);
+    transition: 2s;
+}
+
 .object-container > object {
     display: inline-block;
+    backface-visibility: visible;
     transition: 2s;
+}
+
+.markoslika1 {
+    perspective: 1000px;
+    backface-visibility: hidden;
+    transition: 3s;
+}
+
+.markoslika1:hover {
+    transform:  rotateX(1440deg);
+    backface-visibility: visible;
+    transition: 3s;
 }
 
 object {
